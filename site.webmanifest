@@ -3,11 +3,11 @@
   "short_name": "Soyorica",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F7F9FA",
-  "theme_color": "#11364F",
+  "background_color": "#f3f6f8",
+  "theme_color": "#123a53",
   "icons": [
     {
-      "src": "/assets/icon-512.png",
+      "src": "/assets/brand/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
