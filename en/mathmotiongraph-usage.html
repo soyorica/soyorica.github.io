@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathMotionGraph Usage | Soyorica</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="../assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">Using Our Products</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="../mathmotiongraph-usage.html" lang="ja" data-language-switch>日本語</a>
+          <span>/</span>
+          <a href="mathmotiongraph-usage.html" lang="en" aria-current="true">EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <ul>
+            <li>
+              <a href="#graph-first">Basic usage</a>
+            </li>
+            <li>
+              <a href="#graph-modes">Graph modes and examples</a>
+            </li>
+            <li>
+              <a href="#graph-animation">Animate a graph</a>
+            </li>
+            <li>
+              <a href="#graph-settings">Main settings</a>
+            </li>
+            <li>
+              <a href="#graph-formulas">Supported expressions</a>
+            </li>
+            <li>
+              <a href="#related">Related pages</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="Product pages">
+          <a href="mathmotiongraph-install.html">Installation</a>
+          <a href="mathmotiongraph-usage.html" aria-current="page">Usage</a>
+          <a href="mathmotiongraph-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="mathmotiongraph">MathMotionGraph Usage</h1>
+        <p>A generator for Cartesian, parametric, and polar graphs, as well as inequality regions.</p>
+        <h2 id="graph-first">Basic usage</h2>
+        <ol>
+          <li>
+            Follow <a href="mathmotiongraph-install.html#installation">installation</a> to install MathMotionGraph.
+          </li>
+          <li>
+            On the Edit page, drag <code>MathMotionGraph</code> from Effects → Generators onto the timeline.
+          </li>
+          <li>
+            In the Inspector, select <code>Cartesian</code> as the graph type and enter a formula such as <code>y = sin(x)</code> in the formula field.
+          </li>
+          <li>
+            Set the visible range under <code>View</code>, and adjust the line and region appearance under <code>Boundary</code> / <code>Region</code>.
+          </li>
+          <li>
+            Adjust the axes and grid under <code>Axes</code> / <code>Grid</code>.
+          </li>
+          <li>
+            In Fusion, add the node using <code>Shift + Space</code> and connect its output to <code>MediaOut</code>. Use a <code>Merge</code> node to place the graph over footage.
+          </li>
+        </ol>
+        <h2 id="graph-modes">Graph modes and examples</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Table (scroll horizontally)">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Mode</th>
+                <th scope="col">Input</th>
+                <th scope="col">Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cartesian</td>
+                <td><code>y = sin(x)</code></td>
+                <td>Function graph</td>
+              </tr>
+              <tr>
+                <td>Cartesian</td>
+                <td><code>x^2 + y^2 &lt;= 4</code></td>
+                <td>Inequality region</td>
+              </tr>
+              <tr>
+                <td>Cartesian</td>
+                <td><code>x^2 + y^2 &lt;= 9 AND y &gt;= abs(x)</code></td>
+                <td>Region defined by multiple conditions</td>
+              </tr>
+              <tr>
+                <td>Parametric</td>
+                <td>X: <code>cos(t)</code>, Y: <code>sin(t)</code></td>
+                <td>Parametric curve; also set the t range</td>
+              </tr>
+              <tr>
+                <td>Parametric</td>
+                <td>X: <code>s*sqrt(1-(t^2)/2)</code>, Y: <code>t*sqrt(1-(s^2)/2)</code></td>
+                <td>Parametric region; also set the s and t ranges</td>
+              </tr>
+              <tr>
+                <td>Polar</td>
+                <td><code>1 + cos(theta)</code></td>
+                <td>Polar curve; also set the theta range</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="graph-animation">Animate a graph</h2>
+        <ul>
+          <li>
+            Draw a line progressively: keyframe <code>Draw End</code> from 0 at the start to 1 at the end. Keep <code>Draw Start</code> at 0.
+          </li>
+          <li>
+            Change the graph shape: use a constant in a formula such as <code>y = a*sin(x)</code>, then keyframe <code>a</code>.
+          </li>
+          <li>
+            Move a point: enable <code>Moving Point</code> and keyframe <code>Point Position</code>.
+          </li>
+          <li>
+            Reveal a region: choose <code>Wipe</code>, <code>Trace then Fill</code>, or <code>Trace and Fill</code> under <code>Region Animation</code>.
+          </li>
+        </ul>
+        <h2 id="graph-settings">Main settings</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Table (scroll horizontally)">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Setting</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Graph Type / Formula</td>
+                <td>Graph mode and formula</td>
+              </tr>
+              <tr>
+                <td>Add Second Curve / Fill Between</td>
+                <td>Second curve and fill between curves</td>
+              </tr>
+              <tr>
+                <td>Constants a, b, c, d</td>
+                <td>Adjustable constants used in formulas</td>
+              </tr>
+              <tr>
+                <td>Moving Point / Guide Values</td>
+                <td>Moving point, guides, and coordinate labels</td>
+              </tr>
+              <tr>
+                <td>Boundary / Region</td>
+                <td>Line and fill colors and opacity</td>
+              </tr>
+              <tr>
+                <td>View / Keep Equal Scale</td>
+                <td>Visible range and equal axis scaling</td>
+              </tr>
+              <tr>
+                <td>Axes / Grid / Background</td>
+                <td>Axes, ticks, grid, and background</td>
+              </tr>
+              <tr>
+                <td>Curve Samples / Region Resolution</td>
+                <td>Curve smoothness and region resolution</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="graph-formulas">Supported expressions</h2>
+        <ul>
+          <li>
+            Variables: <code>x</code>, <code>y</code>, <code>s</code>, <code>t</code>, <code>theta</code>, depending on the graph mode.
+          </li>
+          <li>
+            Constants: <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>pi</code>, <code>e</code>.
+          </li>
+          <li>
+            Operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>^</code>. Write multiplication explicitly, as in <code>2*x</code>.
+          </li>
+          <li>
+            Functions: <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>asin</code>, <code>acos</code>, <code>atan</code>, <code>sqrt</code>, <code>abs</code>, <code>exp</code>, <code>log</code>, <code>ln</code>, <code>floor</code>, <code>ceil</code>, <code>min</code>, <code>max</code>.
+          </li>
+          <li>
+            The default number font is New Computer Modern Math. You can also select another installed font.
+          </li>
+        </ul>
+        <h2 id="related">Related pages</h2>
+        <ul>
+          <li>
+            <a href="mathmotiongraph-install.html">MathMotionGraph installation</a>
+          </li>
+          <li>
+            <a href="mathmotiongraph-faq.html">MathMotionGraph FAQ</a>
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

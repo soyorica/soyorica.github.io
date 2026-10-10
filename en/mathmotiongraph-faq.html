@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathMotionGraph FAQ | Soyorica</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="../assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">Using Our Products</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="../mathmotiongraph-faq.html" lang="ja" data-language-switch>日本語</a>
+          <span>/</span>
+          <a href="mathmotiongraph-faq.html" lang="en" aria-current="true">EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <ul>
+            <li>
+              <a href="#installation">Installation questions</a>
+            </li>
+            <li>
+              <a href="#product">Product questions</a>
+            </li>
+            <li>
+              <a href="#support">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="Product pages">
+          <a href="mathmotiongraph-install.html">Installation</a>
+          <a href="mathmotiongraph-usage.html">Usage</a>
+          <a href="mathmotiongraph-faq.html" aria-current="page">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="section-1">MathMotionGraph FAQ</h1>
+        <h2 id="installation">Installation questions</h2>
+        <h3 id="bat-error">I cannot run install.bat.</h3>
+        <ul>
+          <li>
+            There are several possible causes, so we cannot provide one guaranteed solution.
+          </li>
+          <li>
+            In this case, follow the <a href="mathmotiongraph-install.html#manual-installation">manual installation</a> steps.
+          </li>
+        </ul>
+        <h3 id="missing-plugin">The plugin does not appear after installation.</h3>
+        <ul>
+          <li>
+            Extract the entire ZIP and run <code>install.bat</code> from the extracted folder.
+          </li>
+          <li>
+            Restart DaVinci Resolve.
+          </li>
+          <li>
+            In Fusion, press <code>Shift + Space</code> and search for <code>MathMotionGraph</code>.
+          </li>
+          <li>
+            If it is still missing, check that the files are in the folders listed in <a href="mathmotiongraph-install.html#manual-installation">manual installation</a>.
+          </li>
+        </ul>
+        <ul>
+          <li>
+            On the Edit page, check Generators for <code>MathMotionGraph</code>.
+          </li>
+        </ul>
+        <h3 id="installer-message">It says Installation complete., but the plugin does not work.</h3>
+        <ul>
+          <li>
+            Keep <code>install.bat</code> with the supplied files; do not move it to another folder on its own.
+          </li>
+          <li>
+            Check for <code>MathMotionGraph.fuse</code> in the folder below. If it is missing, copy it using <a href="mathmotiongraph-install.html#manual-installation">manual installation</a>.
+          </li>
+        </ul>
+        <div class="path-copy">
+          <code>%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses</code>
+          <button type="button" data-copy="%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses" hidden>Copy</button>
+          <span class="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <ul>
+          <li>
+            If the Fusion node is available but the Edit template is missing, check <code>MathMotionGraph.setting</code> and <code>MathMotionGraph.png</code> in the <a href="mathmotiongraph-install.html#manual-templates">Edit destination</a>.
+          </li>
+        </ul>
+        <h3 id="platforms">Can I run install.bat on Mac / Linux?</h3>
+        <ul>
+          <li>
+            <code>install.bat</code>
+            is for Windows. These paths and installation steps are also for Windows.
+          </li>
+          <li>
+            Use <a href="mathmotiongraph-install.html#manual-installation">manual installation</a> as a reference to copy files to the corresponding folders. Correct operation outside Windows is not guaranteed.
+          </li>
+        </ul>
+        <h3 id="updates">How do I update or uninstall the plugin?</h3>
+        <ul>
+          <li>
+            Before updating, back up projects in use and the previous version’s files.
+          </li>
+          <li>
+            To update, close DaVinci Resolve, extract the new ZIP, and run <code>install.bat</code>. Files with the same names will be overwritten.
+          </li>
+          <li>
+            To uninstall, close DaVinci Resolve and run the supplied <code>uninstall.bat</code>.
+          </li>
+          <li>
+            If <code>uninstall.bat</code> does not work, remove only <code>MathMotionGraph.fuse</code>, <code>MathMotionGraph.setting</code>, and <code>MathMotionGraph.png</code> from the folders listed in <a href="mathmotiongraph-install.html#manual-installation">manual installation</a>.
+          </li>
+          <li>
+            Do not remove other plugins’ files or the entire Fusion folder.
+          </li>
+          <li>
+            Projects using the removed plugin may no longer render as before.
+          </li>
+        </ul>
+        <h2 id="product">Product questions</h2>
+        <h3 id="graph-fonts">Numbers or tick labels are missing.</h3>
+        <ul>
+          <li>
+            Install the <code>.otf</code> files in the supplied <code>Fonts</code> folder and restart DaVinci Resolve. <code>install.bat</code> does not install fonts automatically.
+          </li>
+          <li>
+            Select New Computer Modern Math or another installed font for the number labels in the Inspector.
+          </li>
+          <li>
+            Check that axis labels or <code>Guide Values</code> are enabled.
+          </li>
+        </ul>
+        <h3 id="graph-formula">My graph is not visible.</h3>
+        <ul>
+          <li>
+            Start with a simple expression such as <code>y = sin(x)</code>.
+          </li>
+          <li>
+            Write multiplication explicitly, as in <code>2*x</code>, and check matching parentheses.
+          </li>
+          <li>
+            Check the X / Y minimum and maximum values to make sure the graph lies within the visible range.
+          </li>
+          <li>
+            In the full version, choose the graph mode that matches your expression.
+          </li>
+          <li>
+            Lite does not support parametric or polar modes, or combined <code>AND</code> / <code>OR</code> conditions.
+          </li>
+        </ul>
+        <h3 id="lite-difference">How does Lite differ from the full version?</h3>
+        <ul>
+          <li>
+            Lite includes Cartesian graphs, single inequalities, moving points, axes, and grids.
+          </li>
+          <li>
+            The full version also includes advanced animations, parametric and polar modes, a second curve, fill between curves, and combined conditions.
+          </li>
+          <li>
+            See the <a href="mathmotiongraph-lite-usage.html#lite-comparison">comparison with the full version</a>.
+          </li>
+        </ul>
+        <h3 id="graph-performance">Graph rendering is slow.</h3>
+        <ul>
+          <li>
+            Try lowering <code>Region Resolution</code> under <code>advanced</code>.
+          </li>
+          <li>
+            Lower values reduce processing load but also change the smoothness of curves and regions. Check the result before export.
+          </li>
+          <li>
+            Try lowering the playback resolution or using caching.
+          </li>
+        </ul>
+        <h2 id="support">Contact</h2>
+        <p>If you still need help, email <a href="mailto:soyorica.tools@gmail.com">soyorica.tools@gmail.com</a>. Include the following to help us investigate:</p>
+        <ul>
+          <li>
+            Product name
+          </li>
+          <li>
+            Windows and DaVinci Resolve versions
+          </li>
+          <li>
+            Steps that reproduce the issue, including the formula or settings used
+          </li>
+          <li>
+            Error messages or screenshots without personal information
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

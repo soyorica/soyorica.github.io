@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathMotionGraph の使い方 | Soyorica</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="メインメニュー">
+          <a href="index.html">トップ</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">利用にあたって</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="mathmotiongraph-usage.html" lang="ja" aria-current="true">日本語</a>
+          <span>/</span>
+          <a href="en/mathmotiongraph-usage.html" lang="en" data-language-switch>EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="このページの内容">
+          <p>このページの内容</p>
+          <ul>
+            <li>
+              <a href="#graph-first">基本的な使い方</a>
+            </li>
+            <li>
+              <a href="#graph-modes">描画モードと入力例</a>
+            </li>
+            <li>
+              <a href="#graph-animation">アニメーションを作る</a>
+            </li>
+            <li>
+              <a href="#graph-settings">主な設定</a>
+            </li>
+            <li>
+              <a href="#graph-formulas">利用できる数式</a>
+            </li>
+            <li>
+              <a href="#related">関連ページ</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="この製品のページ">
+          <a href="mathmotiongraph-install.html">インストール</a>
+          <a href="mathmotiongraph-usage.html" aria-current="page">使い方</a>
+          <a href="mathmotiongraph-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="mathmotiongraph">MathMotionGraph の使い方</h1>
+        <p>直交座標・媒介変数・極座標のグラフと、不等式の領域を描画するジェネレーターです。</p>
+        <h2 id="graph-first">基本的な使い方</h2>
+        <ol>
+          <li>
+            <a href="mathmotiongraph-install.html#installation">インストール</a>
+            に従って MathMotionGraph をインストールします。
+          </li>
+          <li>
+            エディットページの「エフェクト」→「ジェネレーター」から <code>MathMotionGraph</code> をタイムラインに配置します。
+          </li>
+          <li>
+            インスペクタでグラフの種類を <code>Cartesian</code> にし、数式欄に <code>y = sin(x)</code> などの数式を入力します。
+          </li>
+          <li>
+            <code>View</code>
+            で表示範囲、<code>Boundary</code> / <code>Region</code> で線と領域の見た目を調整します。
+          </li>
+          <li>
+            <code>Axes</code>
+            / <code>Grid</code> で座標軸とグリッドを調整します。
+          </li>
+          <li>
+            Fusion で使う場合は、<code>Shift + Space</code> で追加して出力を <code>MediaOut</code> に接続します。映像に重ねる場合は <code>Merge</code> で合成します。
+          </li>
+        </ol>
+        <h2 id="graph-modes">描画モードと入力例</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="表（横にスクロールできます）">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">モード</th>
+                <th scope="col">入力例</th>
+                <th scope="col">用途</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cartesian</td>
+                <td><code>y = sin(x)</code></td>
+                <td>関数のグラフ</td>
+              </tr>
+              <tr>
+                <td>Cartesian</td>
+                <td><code>x^2 + y^2 &lt;= 4</code></td>
+                <td>不等式の領域</td>
+              </tr>
+              <tr>
+                <td>Cartesian</td>
+                <td><code>x^2 + y^2 &lt;= 9 AND y &gt;= abs(x)</code></td>
+                <td>複数の条件による領域</td>
+              </tr>
+              <tr>
+                <td>Parametric</td>
+                <td>X に <code>cos(t)</code>、Y に <code>sin(t)</code></td>
+                <td>媒介変数による曲線。t の範囲も指定</td>
+              </tr>
+              <tr>
+                <td>Parametric</td>
+                <td>X に <code>s*sqrt(1-(t^2)/2)</code>、Y に <code>t*sqrt(1-(s^2)/2)</code></td>
+                <td>媒介変数による領域。s, t の範囲も指定</td>
+              </tr>
+              <tr>
+                <td>Polar</td>
+                <td><code>1 + cos(theta)</code></td>
+                <td>極座標の曲線。theta の範囲も指定</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="graph-animation">アニメーションを作る</h2>
+        <ul>
+          <li>
+            線を徐々に描く：開始フレームで <code>Draw End</code> を 0、終了フレームで 1 にしてキーフレームを設定します。<code>Draw Start</code> は 0 にします。
+          </li>
+          <li>
+            グラフを変形する：<code>y = a*sin(x)</code> のように定数を使い、<code>a</code> にキーフレームを設定します。
+          </li>
+          <li>
+            点を動かす：<code>Moving Point</code> を有効にし、点の位置である <code>Point Position</code> にキーフレームを設定します。
+          </li>
+          <li>
+            領域を出現させる：<code>Region Animation</code> から <code>Wipe</code> / <code>Trace then Fill</code> / <code>Trace and Fill</code> を選びます。
+          </li>
+        </ul>
+        <h2 id="graph-settings">主な設定</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="表（横にスクロールできます）">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">設定</th>
+                <th scope="col">内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Graph Type / Formula</td>
+                <td>描画モードと数式</td>
+              </tr>
+              <tr>
+                <td>Add Second Curve / Fill Between</td>
+                <td>2本目の曲線と、曲線間の塗りつぶし</td>
+              </tr>
+              <tr>
+                <td>Constants a, b, c, d</td>
+                <td>数式で使用する調整可能な定数</td>
+              </tr>
+              <tr>
+                <td>Moving Point / Guide Values</td>
+                <td>移動点・補助線・座標値の表示</td>
+              </tr>
+              <tr>
+                <td>Boundary / Region</td>
+                <td>線と塗りつぶしの色・透明度</td>
+              </tr>
+              <tr>
+                <td>View / Keep Equal Scale</td>
+                <td>表示範囲と縦横の単位の比率</td>
+              </tr>
+              <tr>
+                <td>Axes / Grid / Background</td>
+                <td>軸・目盛り・グリッド・背景</td>
+              </tr>
+              <tr>
+                <td>Curve Samples / Region Resolution</td>
+                <td>曲線の滑らかさと領域の描画解像度</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="graph-formulas">利用できる数式</h2>
+        <ul>
+          <li>
+            変数：<code>x</code>, <code>y</code>, <code>s</code>, <code>t</code>, <code>theta</code>（使用する描画モードに応じて指定）。
+          </li>
+          <li>
+            定数：<code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>pi</code>, <code>e</code>。
+          </li>
+          <li>
+            演算子：<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>^</code>。掛け算は <code>2*x</code> のように <code>*</code> を明示します。
+          </li>
+          <li>
+            関数：<code>sin</code>, <code>cos</code>, <code>tan</code>, <code>asin</code>, <code>acos</code>, <code>atan</code>, <code>sqrt</code>, <code>abs</code>, <code>exp</code>, <code>log</code>, <code>ln</code>, <code>floor</code>, <code>ceil</code>, <code>min</code>, <code>max</code>。
+          </li>
+          <li>
+            標準の数値フォントは New Computer Modern Math です。別のインストール済みフォントに変更することもできます。
+          </li>
+        </ul>
+        <h2 id="related">関連ページ</h2>
+        <ul>
+          <li>
+            <a href="mathmotiongraph-install.html">MathMotionGraph のインストール</a>
+          </li>
+          <li>
+            <a href="mathmotiongraph-faq.html">MathMotionGraph のFAQ</a>
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">お問い合わせ</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

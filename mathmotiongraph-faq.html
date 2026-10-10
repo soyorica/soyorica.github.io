@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathMotionGraph FAQ | Soyorica</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="メインメニュー">
+          <a href="index.html">トップ</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">利用にあたって</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="mathmotiongraph-faq.html" lang="ja" aria-current="true">日本語</a>
+          <span>/</span>
+          <a href="en/mathmotiongraph-faq.html" lang="en" data-language-switch>EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="このページの内容">
+          <p>このページの内容</p>
+          <ul>
+            <li>
+              <a href="#installation">インストールについて</a>
+            </li>
+            <li>
+              <a href="#product">製品について</a>
+            </li>
+            <li>
+              <a href="#support">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="この製品のページ">
+          <a href="mathmotiongraph-install.html">インストール</a>
+          <a href="mathmotiongraph-usage.html">使い方</a>
+          <a href="mathmotiongraph-faq.html" aria-current="page">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="section-1">MathMotionGraph FAQ</h1>
+        <h2 id="installation">インストールについて</h2>
+        <h3 id="bat-error">install.batを実行できません。</h3>
+        <ul>
+          <li>
+            様々な原因が考えられるため、確実な解決策を提示することができません。
+          </li>
+          <li>
+            そのような場合には、<a href="mathmotiongraph-install.html#manual-installation">手動インストール</a> の手順に従ってください。
+          </li>
+        </ul>
+        <h3 id="missing-plugin">インストールしてもプラグインが表示されません。</h3>
+        <ul>
+          <li>
+            ZIP をすべて展開し、展開先の <code>install.bat</code> を実行したか確認してください。
+          </li>
+          <li>
+            DaVinci Resolve を再起動してください。
+          </li>
+          <li>
+            Fusion のノード検索で確認してください。Fusion では <code>Shift + Space</code> で <code>MathMotionGraph</code> を検索します。
+          </li>
+          <li>
+            見つからない場合は <a href="mathmotiongraph-install.html#manual-installation">手動インストール</a> のコピー先に、対象ファイルがあるか確認してください。
+          </li>
+        </ul>
+        <ul>
+          <li>
+            エディットページの「ジェネレーター」に <code>MathMotionGraph</code> があるか確認してください。
+          </li>
+        </ul>
+        <h3 id="installer-message">Installation complete. と表示されたのに使えません。</h3>
+        <ul>
+          <li>
+            <code>install.bat</code>
+            だけを別のフォルダに移動せず、同梱ファイルと一緒に実行してください。
+          </li>
+          <li>
+            以下のフォルダに<code>MathMotionGraph.fuse</code>があるかを確認し、なければ <a href="mathmotiongraph-install.html#manual-installation">手動インストール</a> の手順に従ってコピーしてください。
+          </li>
+        </ul>
+        <div class="path-copy">
+          <code>%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses</code>
+          <button type="button" data-copy="%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses" hidden>コピー</button>
+          <span class="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <ul>
+          <li>
+            Fusion のノードがあるのにエディットページに表示されない場合は、<a href="mathmotiongraph-install.html#manual-templates">Edit のコピー先</a> に <code>MathMotionGraph.setting</code> と <code>MathMotionGraph.png</code> があるかも確認してください。
+          </li>
+        </ul>
+        <h3 id="platforms">Mac / Linux でも install.bat を使えますか？</h3>
+        <ul>
+          <li>
+            <code>install.bat</code>
+            は Windows 用です。このサイトのパスとインストール手順も Windows 向けです。
+          </li>
+          <li>
+            <a href="mathmotiongraph-install.html#manual-installation">手動インストール</a>
+            を参考に、類似するフォルダに各ファイルをコピーしてください。ただし、Windows以外での正常な動作は保証できません。
+          </li>
+        </ul>
+        <h3 id="updates">更新・アンインストールはどうしますか？</h3>
+        <ul>
+          <li>
+            更新前には、使用中のプロジェクトと旧バージョンのファイルをバックアップしてください。
+          </li>
+          <li>
+            更新は DaVinci Resolve を終了し、新しい配布 ZIP を展開して <code>install.bat</code> を実行します。同名のファイルは上書きされます。
+          </li>
+          <li>
+            アンインストールする際には DaVinci Resolve を終了し、同封された<code>uninstall.bat</code>を実行してください。
+          </li>
+          <li>
+            <code>uninstall.bat</code>
+            が正常に動作しない場合には、<a href="mathmotiongraph-install.html#manual-installation">手動インストール</a>に記載されたフォルダから <code>MathMotionGraph.fuse</code>・<code>MathMotionGraph.setting</code>・<code>MathMotionGraph.png</code> のみを削除します。
+          </li>
+          <li>
+            ほかのプラグインのファイルや、Fusion フォルダ全体は削除しないでください。
+          </li>
+          <li>
+            プラグインを使用中のプロジェクトは、削除後に同じように表示できなくなる場合があります。
+          </li>
+        </ul>
+        <h2 id="product">製品について</h2>
+        <h3 id="graph-fonts">数字や目盛りが表示されません。</h3>
+        <ul>
+          <li>
+            同梱の <code>Fonts</code> フォルダ内の <code>.otf</code> ファイルをインストールし、DaVinci Resolve を再起動してください。<code>install.bat</code> はフォントを自動インストールしません。
+          </li>
+          <li>
+            インスペクタで、数値フォントに New Computer Modern Math またはインストール済みの別フォントを選択してください。
+          </li>
+          <li>
+            軸の数値表示や <code>Guide Values</code> が有効になっているか確認してください。
+          </li>
+        </ul>
+        <h3 id="graph-formula">グラフが描画されません。</h3>
+        <ul>
+          <li>
+            まず <code>y = sin(x)</code> のような単純な式で試してください。
+          </li>
+          <li>
+            掛け算は <code>2*x</code> のように <code>*</code> を記入し、括弧を閉じてください。
+          </li>
+          <li>
+            グラフが表示範囲の外にないか、X / Y の最小値・最大値を確認してください。
+          </li>
+          <li>
+            製品版では、入力する式に合った描画モードを選んでください。
+          </li>
+          <li>
+            Lite は媒介変数・極座標・<code>AND</code> / <code>OR</code> による複合条件に対応していません。
+          </li>
+        </ul>
+        <h3 id="lite-difference">Lite と製品版の違いは何ですか？</h3>
+        <ul>
+          <li>
+            Lite は直交座標と単一不等式のグラフ、移動点、軸・グリッドなどを利用できます。
+          </li>
+          <li>
+            製品版には高度なアニメーション、媒介変数・極座標、第2曲線、曲線間の塗りつぶし、複合条件などがあります。
+          </li>
+          <li>
+            詳しくは <a href="mathmotiongraph-lite-usage.html#lite-comparison">製品版との違い</a> を参照してください。
+          </li>
+        </ul>
+        <h3 id="graph-performance">グラフ描画が重くなります。</h3>
+        <ul>
+          <li>
+            <code>advanced</code>
+            の中にある<code>Region Resolution</code> を下げて確認してください。
+          </li>
+          <li>
+            値を下げると負荷は軽くなりますが、曲線や領域の滑らかさも変わります。書き出し前に表示を確認してください。
+          </li>
+        </ul>
+        <ul>
+          <li>
+            再生解像度を下げたり、キャッシュを使用してみてください。
+          </li>
+        </ul>
+        <h2 id="support">お問い合わせ</h2>
+        <p>解決しない場合は <a href="mailto:soyorica.tools@gmail.com">soyorica.tools@gmail.com</a> までご連絡ください。次の情報があると状況を確認しやすくなります。</p>
+        <ul>
+          <li>
+            製品名
+          </li>
+          <li>
+            Windows と DaVinci Resolve のバージョン
+          </li>
+          <li>
+            問題が起きる操作、入力した数式や設定
+          </li>
+          <li>
+            エラー文や、個人情報を含まない画面のスクリーンショット
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">お問い合わせ</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

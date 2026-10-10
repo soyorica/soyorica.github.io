@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HairSway の使い方 | Soyorica</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="メインメニュー">
+          <a href="index.html">トップ</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">利用にあたって</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="hairsway-usage.html" lang="ja" aria-current="true">日本語</a>
+          <span>/</span>
+          <a href="en/hairsway-usage.html" lang="en" data-language-switch>EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="このページの内容">
+          <p>このページの内容</p>
+          <ul>
+            <li>
+              <a href="#hairsway-first">基本的な使い方</a>
+            </li>
+            <li>
+              <a href="#hairsway-settings">揺れの設定</a>
+            </li>
+            <li>
+              <a href="#hairsway-protection">顔や背景を保護する</a>
+            </li>
+            <li>
+              <a href="#related">関連ページ</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="この製品のページ">
+          <a href="hairsway-install.html">インストール</a>
+          <a href="hairsway-usage.html" aria-current="page">使い方</a>
+          <a href="hairsway-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="hairsway">HairSway の使い方</h1>
+        <p>髪・衣服・紐などにピンを配置して、自然な揺れを加えるエフェクトです。最大8グループ、各グループ2〜6個のピンを使えます。</p>
+        <h2 id="hairsway-first">基本的な使い方</h2>
+        <ol>
+          <li>
+            <a href="hairsway-install.html#installation">インストール</a>
+            に従って HairSwayをインストールします。
+          </li>
+          <li>
+            Fusionクリップを作成し、Fusionページへ移動します。
+          </li>
+          <li>
+            動かしたい画像を取り込みます。この際、動かしたい部分とそれ以外の部分で別のノードとなるようにしてください。
+          </li>
+          <li>
+            <code>Shift + Space</code>
+            で <code>HairSway</code> を検索し、<code>動かしたい部分のノード</code> → <code>HairSway</code> → <code>MediaOut</code> の順につなぎます。
+          </li>
+          <li>
+            HairSway をビューアに表示して選択し、<code>Sway 1</code> のピンを根元から毛先に向けて配置します。
+          </li>
+          <li>
+            <code>Sway Distance</code>
+            と <code>Speed</code> を調整し、タイムラインを再生して揺れを確認します。
+          </li>
+          <li>
+            別の毛束も揺らす場合は、<code>Sway2</code>以降の <code>Enable Sway</code> を有効にしてピンを配置します。
+          </li>
+        </ol>
+        <h2 id="hairsway-settings">揺れの設定</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="表（横にスクロールできます）">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">設定</th>
+                <th scope="col">内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Enable / Mix</td>
+                <td>エフェクト全体の有効・無効と適用率</td>
+              </tr>
+              <tr>
+                <td>Master Amount / Speed</td>
+                <td>全グループの揺れ幅・速度を一括調整</td>
+              </tr>
+              <tr>
+                <td>Frame Rate / Start Frame</td>
+                <td>動きの基準フレームレートと開始フレーム</td>
+              </tr>
+              <tr>
+                <td>Pin Count / Root Pin / Tip Pin</td>
+                <td>ピンの数と根元・毛先の配置</td>
+              </tr>
+              <tr>
+                <td>Sway Distance</td>
+                <td>揺れの振り幅</td>
+              </tr>
+              <tr>
+                <td>Influence Radius / Edge Feather</td>
+                <td>変形の影響範囲と境界のぼかし</td>
+              </tr>
+              <tr>
+                <td>Speed / Phase / Lag</td>
+                <td>速度・位相・先端へ向かう遅れ</td>
+              </tr>
+              <tr>
+                <td>Root Lock / Root Protection</td>
+                <td>根元付近の固定・保護</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="hairsway-protection">顔や背景を保護する</h2>
+        <ul>
+          <li>
+            <code>Protection</code>
+            タブの <code>Anchor 1〜4</code> を使い、動かしたくない顔や背景などを保護します。
+          </li>
+          <li>
+            根元が動きすぎる場合は <code>Root Lock</code> / <code>Root Protection</code> を調整します。
+          </li>
+          <li>
+            動作が重い場合は、不要なグループを無効にし、<code>Influence Radius</code> を必要な範囲に絞ります。
+          </li>
+        </ul>
+        <h2 id="related">関連ページ</h2>
+        <ul>
+          <li>
+            <a href="hairsway-install.html">HairSway のインストール</a>
+          </li>
+          <li>
+            <a href="hairsway-faq.html">HairSway のFAQ</a>
+          </li>
+          <li>
+            <a href="https://youtu.be/bD9DmsSuRzk?si=TjY4VFAWozVMDG2o">イラストの髪を自動で揺らす方法｜Davinci resolve</a>
+            （Youtubeへ遷移します）
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">お問い合わせ</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

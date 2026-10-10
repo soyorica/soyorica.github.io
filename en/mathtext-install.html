@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathText — Installation | Soyorica</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="../assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">Using Our Products</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="../mathtext-install.html" lang="ja" data-language-switch>日本語</a>
+          <span>/</span>
+          <a href="mathtext-install.html" lang="en" aria-current="true">EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <ul>
+            <li>
+              <a href="#installation">Install with install.bat</a>
+            </li>
+            <li>
+              <a href="#find-plugin">Find the plugin</a>
+            </li>
+            <li>
+              <a href="#manual-installation">Manual installation</a>
+            </li>
+            <li>
+              <a href="#help">Need help?</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="Product pages">
+          <a href="mathtext-install.html" aria-current="page">Installation</a>
+          <a href="mathtext-usage.html">Usage</a>
+          <a href="mathtext-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="section-1">MathText — Installation</h1>
+        <p>Windows installation instructions.</p>
+        <h2 id="installation">Install with install.bat</h2>
+        <ol>
+          <li>
+            Close DaVinci Resolve.
+          </li>
+          <li>
+            Right-click the downloaded <code>MathText.zip</code> and select “Extract All”.
+          </li>
+          <li>
+            Double-click <code>install.bat</code> in the extracted folder.
+          </li>
+          <li>
+            When <code>Installation complete.</code> appears, press a key to close the window.
+          </li>
+          <li>
+            Start DaVinci Resolve.
+          </li>
+        </ol>
+        <h2 id="find-plugin">Find the plugin</h2>
+        <ul>
+          <li>
+            In Fusion, press <code>Shift + Space</code> and search for <code>MathText</code>. If you can add the <code>MathText</code> node, the Fuse is installed correctly.
+          </li>
+          <li>
+            On the Edit page, open Effects → Titles and check that <code>MathText</code> is available.
+          </li>
+          <li>
+            For usage instructions, see <a href="mathtext-usage.html">MathText usage</a>.
+          </li>
+          <li>
+            MathText embeds its fonts; no separate installation is needed.
+          </li>
+        </ul>
+        <h2 id="manual-installation">Manual installation</h2>
+        <p>If the plugin does not appear after running <code>install.bat</code>, close DaVinci Resolve and copy the files below. Paste each destination into the File Explorer address bar. Create missing folders. The <code>Installation complete.</code> message alone may not confirm that the files were copied successfully.</p>
+        <h3 id="manual-fuses">Fuse</h3>
+        <p>Copy <code>MathText.fuse</code> from the extracted <code>MathText</code> folder’s <code>Fuses</code> folder to the destination below.</p>
+        <div class="path-copy">
+          <code>%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses</code>
+          <button type="button" data-copy="%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses" hidden>Copy</button>
+          <span class="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <h3 id="manual-templates">Edit</h3>
+        <p>Copy <code>MathText.setting</code> and <code>MathText.png</code> from the extracted <code>MathText</code> folder’s <code>Edit</code> folder to the destination below.</p>
+        <div class="path-copy">
+          <code>%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\Edit\Titles</code>
+          <button type="button" data-copy="%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\Edit\Titles" hidden>Copy</button>
+          <span class="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <p>After copying, restart DaVinci Resolve and <a href="#find-plugin">check the plugin</a>.</p>
+        <h2 id="help">Need help?</h2>
+        <p>If you need help, see <a href="mathtext-faq.html">MathText FAQ</a>.</p>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

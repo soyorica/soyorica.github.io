@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathText FAQ | Soyorica</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="メインメニュー">
+          <a href="index.html">トップ</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">利用にあたって</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="mathtext-faq.html" lang="ja" aria-current="true">日本語</a>
+          <span>/</span>
+          <a href="en/mathtext-faq.html" lang="en" data-language-switch>EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="このページの内容">
+          <p>このページの内容</p>
+          <ul>
+            <li>
+              <a href="#installation">インストールについて</a>
+            </li>
+            <li>
+              <a href="#product">製品について</a>
+            </li>
+            <li>
+              <a href="#support">お問い合わせ</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="この製品のページ">
+          <a href="mathtext-install.html">インストール</a>
+          <a href="mathtext-usage.html">使い方</a>
+          <a href="mathtext-faq.html" aria-current="page">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="section-1">MathText FAQ</h1>
+        <h2 id="installation">インストールについて</h2>
+        <h3 id="bat-error">install.batを実行できません。</h3>
+        <ul>
+          <li>
+            様々な原因が考えられるため、確実な解決策を提示することができません。
+          </li>
+          <li>
+            そのような場合には、<a href="mathtext-install.html#manual-installation">手動インストール</a> の手順に従ってください。
+          </li>
+        </ul>
+        <h3 id="missing-plugin">インストールしてもプラグインが表示されません。</h3>
+        <ul>
+          <li>
+            ZIP をすべて展開し、展開先の <code>install.bat</code> を実行したか確認してください。
+          </li>
+          <li>
+            DaVinci Resolve を再起動してください。
+          </li>
+          <li>
+            Fusion のノード検索で確認してください。Fusion では <code>Shift + Space</code> で <code>MathText</code> を検索します。
+          </li>
+          <li>
+            見つからない場合は <a href="mathtext-install.html#manual-installation">手動インストール</a> のコピー先に、対象ファイルがあるか確認してください。
+          </li>
+        </ul>
+        <ul>
+          <li>
+            エディットページの「タイトル」に <code>MathText</code> があるか確認してください。
+          </li>
+        </ul>
+        <h3 id="installer-message">Installation complete. と表示されたのに使えません。</h3>
+        <ul>
+          <li>
+            <code>install.bat</code>
+            だけを別のフォルダに移動せず、同梱ファイルと一緒に実行してください。
+          </li>
+          <li>
+            以下のフォルダに<code>MathText.fuse</code>があるかを確認し、なければ <a href="mathtext-install.html#manual-installation">手動インストール</a> の手順に従ってコピーしてください。
+          </li>
+        </ul>
+        <div class="path-copy">
+          <code>%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses</code>
+          <button type="button" data-copy="%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses" hidden>コピー</button>
+          <span class="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <ul>
+          <li>
+            Fusion のノードがあるのにエディットページに表示されない場合は、<a href="mathtext-install.html#manual-templates">Edit のコピー先</a> に <code>MathText.setting</code> と <code>MathText.png</code> があるかも確認してください。
+          </li>
+        </ul>
+        <h3 id="platforms">Mac / Linux でも install.bat を使えますか？</h3>
+        <ul>
+          <li>
+            <code>install.bat</code>
+            は Windows 用です。このサイトのパスとインストール手順も Windows 向けです。
+          </li>
+          <li>
+            <a href="mathtext-install.html#manual-installation">手動インストール</a>
+            を参考に、類似するフォルダに各ファイルをコピーしてください。ただし、Windows以外での正常な動作は保証できません。
+          </li>
+        </ul>
+        <h3 id="updates">更新・アンインストールはどうしますか？</h3>
+        <ul>
+          <li>
+            更新前には、使用中のプロジェクトと旧バージョンのファイルをバックアップしてください。
+          </li>
+          <li>
+            更新は DaVinci Resolve を終了し、新しい配布 ZIP を展開して <code>install.bat</code> を実行します。同名のファイルは上書きされます。
+          </li>
+          <li>
+            アンインストールする際には DaVinci Resolve を終了し、同封された<code>uninstall.bat</code>を実行してください。
+          </li>
+          <li>
+            <code>uninstall.bat</code>
+            が正常に動作しない場合には、<a href="mathtext-install.html#manual-installation">手動インストール</a>に記載されたフォルダから <code>MathText.fuse</code>・<code>MathText.setting</code>・<code>MathText.png</code> のみを削除します。
+          </li>
+          <li>
+            ほかのプラグインのファイルや、Fusion フォルダ全体は削除しないでください。
+          </li>
+          <li>
+            プラグインを使用中のプロジェクトは、削除後に同じように表示できなくなる場合があります。
+          </li>
+        </ul>
+        <h2 id="product">製品について</h2>
+        <h3 id="mathtext-fonts">フォントは何をインストールすればいいですか？</h3>
+        <ul>
+          <li>
+            MathText は数式用のフォントデータを内蔵しているため、フォントの追加インストールは不要です。
+          </li>
+        </ul>
+        <h3 id="mathtext-formula">数式が表示されません。</h3>
+        <ul>
+          <li>
+            <code>Formula</code>
+            に <code>x^2</code> を入力して確認してください。
+          </li>
+          <li>
+            <code>$</code>
+            などの囲みを付けず、数式本体を入力してください。
+          </li>
+          <li>
+            <code>\frac{a}{b}</code>
+            などのコマンドの綴りと、<code>{ }</code> の対応を確認してください。
+          </li>
+          <li>
+            すべての LaTeX コマンドに対応しているわけではありません。<a href="mathtext-usage.html#mathtext-examples">入力例</a> から少しずつ式を追加してください。
+          </li>
+          <li>
+            サイズ、配置、色の透明度も確認してください。
+          </li>
+        </ul>
+        <h3 id="mathtext-location">ジェネレーターに MathText がありません。</h3>
+        <ul>
+          <li>
+            MathText はエディットページの「タイトル」に表示されます。
+          </li>
+          <li>
+            見つからない場合には、<code>Shift + Space</code>で<code>MathText</code>と検索して、<code>Enter</code>を押してください。
+          </li>
+        </ul>
+        <h2 id="support">お問い合わせ</h2>
+        <p>解決しない場合は <a href="mailto:soyorica.tools@gmail.com">soyorica.tools@gmail.com</a> までご連絡ください。次の情報があると状況を確認しやすくなります。</p>
+        <ul>
+          <li>
+            製品名
+          </li>
+          <li>
+            Windows と DaVinci Resolve のバージョン
+          </li>
+          <li>
+            問題が起きる操作、入力した数式や設定
+          </li>
+          <li>
+            エラー文や、個人情報を含まない画面のスクリーンショット
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">お問い合わせ</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

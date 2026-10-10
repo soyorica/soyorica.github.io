@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathText の使い方 | Soyorica</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="メインメニュー">
+          <a href="index.html">トップ</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">利用にあたって</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="mathtext-usage.html" lang="ja" aria-current="true">日本語</a>
+          <span>/</span>
+          <a href="en/mathtext-usage.html" lang="en" data-language-switch>EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="このページの内容">
+          <p>このページの内容</p>
+          <ul>
+            <li>
+              <a href="#mathtext-first">基本的な使い方</a>
+            </li>
+            <li>
+              <a href="#mathtext-examples">数式の入力例</a>
+            </li>
+            <li>
+              <a href="#animation-settings">アニメーションの設定</a>
+            </li>
+            <li>
+              <a href="#related">関連ページ</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="この製品のページ">
+          <a href="mathtext-install.html">インストール</a>
+          <a href="mathtext-usage.html" aria-current="page">使い方</a>
+          <a href="mathtext-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="mathtext">MathText の使い方</h1>
+        <p>LaTeX 形式の数式記法を使って、数式を映像内に表示するジェネレーターです。LaTeX のすべての機能に対応するものではありません。</p>
+        <h2 id="mathtext-first">基本的な使い方</h2>
+        <ol>
+          <li>
+            <a href="mathtext-install.html#installation">インストール</a>
+            でインストールします。MathText のフォントは内蔵されています。
+          </li>
+          <li>
+            エディットページの「エフェクト」→「タイトル」から <code>MathText</code> を映像の上のトラックに配置します。
+          </li>
+          <li>
+            インスペクタの <code>Formula</code> に数式を入力します。例：<code>\frac{1}{2}</code>。
+          </li>
+          <li>
+            <code>Size</code>
+            で大きさ、<code>Position X</code> / <code>Position Y</code> で配置を調整します。
+          </li>
+          <li>
+            <code>Appearance</code>
+            の <code>Base Color</code> で基本の色を調整します。
+          </li>
+          <li>
+            <code>Write Animation</code>
+            の<code>WriteProgress</code>を使用して、登場アニメーションを追加することができます。
+          </li>
+          <li>
+            Fusion では <code>Shift + Space</code> で <code>MathText</code> を追加します。単独出力は <code>MediaOut</code> へ、映像に重ねる場合は <code>Merge</code> へ接続します。
+          </li>
+        </ol>
+        <h2 id="mathtext-examples">数式の入力例</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="表（横にスクロールできます）">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">表現</th>
+                <th scope="col">Formula に入力する内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>上付き・下付き</td>
+                <td><code>x^2 + a_1</code></td>
+              </tr>
+              <tr>
+                <td>分数</td>
+                <td><code>\frac{a+b}{c}</code></td>
+              </tr>
+              <tr>
+                <td>平方根</td>
+                <td><code>\sqrt{x}</code></td>
+              </tr>
+              <tr>
+                <td>積分</td>
+                <td><code>\int_a^b f(x)\,dx</code></td>
+              </tr>
+              <tr>
+                <td>ギリシャ文字</td>
+                <td><code>\alpha + \beta</code></td>
+              </tr>
+              <tr>
+                <td>文字に色を付ける</td>
+                <td><code>y = a {\color{1}x} + b</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>
+            数式を <code>$</code> で囲まず、数式本体を入力してください。
+          </li>
+          <li>
+            複数の文字をまとめる場合は <code>{ }</code> を使います。例：<code>x^{a+b}</code>。
+          </li>
+          <li>
+            特定の文字の色を変える際には、<code>\color{}</code>を使用してください。<code>{}</code>内には<code>red</code>など色の名前のほか、インスペクタで指定した色として<code>1</code>～<code>4</code>を入力することができます。
+          </li>
+          <li>
+            数式が表示されない場合は、括弧の対応やコマンドの綴りを確認し、短い式で試してください。また、画面に表示されるエラーメッセージを確認してください。
+          </li>
+        </ul>
+        <h2 id="animation-settings">アニメーションの設定</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="表（横にスクロールできます）">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">設定</th>
+                <th scope="col">内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Write</td>
+                <td>登場アニメーションの進行度</td>
+              </tr>
+              <tr>
+                <td>Erase</td>
+                <td>退場アニメーションの進行度</td>
+              </tr>
+              <tr>
+                <td>Charactor Lag</td>
+                <td>各文字のアニメーション開始時点をどの程度重ねるか</td>
+              </tr>
+              <tr>
+                <td>Outline width</td>
+                <td>アニメーションの際の線の太さ。アニメーション終了後に表示される文字の線の太さには影響しない</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="related">関連ページ</h2>
+        <ul>
+          <li>
+            <a href="mathtext-install.html">MathText のインストール</a>
+          </li>
+          <li>
+            <a href="mathtext-faq.html">MathText のFAQ</a>
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">お問い合わせ</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

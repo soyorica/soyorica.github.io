@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathMotionGraph Lite の使い方 | Soyorica</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="メインメニュー">
+          <a href="index.html">トップ</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">利用にあたって</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="mathmotiongraph-lite-usage.html" lang="ja" aria-current="true">日本語</a>
+          <span>/</span>
+          <a href="en/mathmotiongraph-lite-usage.html" lang="en" data-language-switch>EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="このページの内容">
+          <p>このページの内容</p>
+          <ul>
+            <li>
+              <a href="#lite-first">基本的な使い方</a>
+            </li>
+            <li>
+              <a href="#lite-animation">アニメーションを作る</a>
+            </li>
+            <li>
+              <a href="#lite-comparison">製品版との違い</a>
+            </li>
+            <li>
+              <a href="#related">関連ページ</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="この製品のページ">
+          <a href="mathmotiongraph-lite-install.html">インストール</a>
+          <a href="mathmotiongraph-lite-usage.html" aria-current="page">使い方</a>
+          <a href="mathmotiongraph-lite-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="mathmotiongraph-lite">MathMotionGraph Lite の使い方</h1>
+        <p>直交座標のグラフと単一不等式の領域描画に対応した Lite 版です。製品版については<a href="mathmotiongraph-usage.html">こちら</a>。</p>
+        <h2 id="lite-first">基本的な使い方</h2>
+        <ol>
+          <li>
+            <a href="mathmotiongraph-lite-install.html#installation">インストール</a>
+            に従って MathMotionGraph Lite をインストールします。
+          </li>
+          <li>
+            エディットページの「エフェクト」→「ジェネレーター」から <code>MathMotionGraph_Lite</code> をタイムラインに配置します。
+          </li>
+          <li>
+            インスペクタの <code>Formula</code> に <code>y = sin(x)</code> や <code>x^2 + y^2 &lt;= 4</code> など数式を入力します。
+          </li>
+          <li>
+            <code>View</code>
+            で表示範囲、<code>Boundary</code> / <code>Region</code> で線と領域の見た目を調整します。
+          </li>
+          <li>
+            <code>Axes</code>
+            / <code>Grid</code> で座標軸とグリッドを調整します。
+          </li>
+          <li>
+            Fusion で使う場合は、<code>Shift + Space</code> で追加して出力を <code>MediaOut</code> に接続します。映像に重ねる場合は <code>Merge</code> で合成します。
+          </li>
+        </ol>
+        <h2 id="lite-animation">アニメーションを作る</h2>
+        <ul>
+          <li>
+            グラフを変形する：<code>y = a*sin(x)</code> のように定数を使い、<code>a</code> にキーフレームを設定します。
+          </li>
+          <li>
+            点を動かす：<code>Moving Point</code> を有効にし、点の位置である <code>Point Position</code> にキーフレームを設定します。
+          </li>
+        </ul>
+        <h2 id="lite-comparison">製品版との違い</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="表（横にスクロールできます）">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">機能</th>
+                <th scope="col">Lite</th>
+                <th scope="col">製品版</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>直交座標・単一不等式</td>
+                <td>〇</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>定数 a〜d・移動点・補助線</td>
+                <td>〇</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>軸・グリッド・背景の設定</td>
+                <td>〇</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>アニメーション</td>
+                <td>△（制限あり）</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>媒介変数・極座標</td>
+                <td>✖</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>第2曲線・曲線間の塗りつぶし</td>
+                <td>✖</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>AND / OR による複合条件の領域描画</td>
+                <td>✖</td>
+                <td>〇</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>
+            Lite で使える変数は <code>x</code>, <code>y</code> です。定数・演算子・数学関数は <a href="mathmotiongraph-usage.html#graph-formulas">MathMotionGraph の一覧</a> を参照してください。
+          </li>
+          <li>
+            グラフの変形や点を動かすなどのアニメーションはLite版でも可能ですが、線を徐々に描く、領域を出現させるなどのアニメーションは、製品版のみで使用できます。
+          </li>
+          <li>
+            <code>Vertical / Horizontal Guide</code>
+            で補助線を、<code>Guide Values</code> で座標値を表示できます。
+          </li>
+        </ul>
+        <h2 id="related">関連ページ</h2>
+        <ul>
+          <li>
+            <a href="mathmotiongraph-lite-install.html">MathMotionGraph Lite のインストール</a>
+          </li>
+          <li>
+            <a href="mathmotiongraph-lite-faq.html">MathMotionGraph Lite のFAQ</a>
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">お問い合わせ</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

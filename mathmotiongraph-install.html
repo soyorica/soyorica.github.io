@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathMotionGraph のインストール | Soyorica</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="メインメニュー">
+          <a href="index.html">トップ</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">利用にあたって</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="mathmotiongraph-install.html" lang="ja" aria-current="true">日本語</a>
+          <span>/</span>
+          <a href="en/mathmotiongraph-install.html" lang="en" data-language-switch>EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="このページの内容">
+          <p>このページの内容</p>
+          <ul>
+            <li>
+              <a href="#installation">install.bat でインストール</a>
+            </li>
+            <li>
+              <a href="#find-plugin">プラグインを確認する</a>
+            </li>
+            <li>
+              <a href="#manual-installation">手動インストール</a>
+            </li>
+            <li>
+              <a href="#help">うまくいかない場合</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="この製品のページ">
+          <a href="mathmotiongraph-install.html" aria-current="page">インストール</a>
+          <a href="mathmotiongraph-usage.html">使い方</a>
+          <a href="mathmotiongraph-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="section-1">MathMotionGraph のインストール</h1>
+        <p>Windows 向けのインストール手順です。</p>
+        <h2 id="installation">install.bat でインストール</h2>
+        <ol>
+          <li>
+            DaVinci Resolve を終了します。
+          </li>
+          <li>
+            ダウンロードした <code>MathMotionGraph.zip</code> を右クリックし、「すべて展開」を選びます。
+          </li>
+          <li>
+            展開したフォルダ内の <code>install.bat</code> をダブルクリックします。
+          </li>
+          <li>
+            <code>Installation complete.</code>
+            と表示されたら、キーを押して画面を閉じます。
+          </li>
+          <li>
+            展開したフォルダ内の <code>Fonts</code> フォルダにある <code>.otf</code> を開き、「インストール」を選びます。
+          </li>
+          <li>
+            DaVinci Resolve を起動します。
+          </li>
+        </ol>
+        <h2 id="find-plugin">プラグインを確認する</h2>
+        <ul>
+          <li>
+            Fusion で <code>Shift + Space</code> を押し、<code>MathMotionGraph</code> と検索します。MathMotionGraph ノードが追加されたら Fuse は正しくインストールされています。
+          </li>
+          <li>
+            エディットページでは「エフェクト」→「ジェネレーター」に <code>MathMotionGraph</code> が表示されるか確認します。
+          </li>
+          <li>
+            使い方については <a href="mathmotiongraph-usage.html">MathMotionGraph の使い方</a> を参照してください。
+          </li>
+        </ul>
+        <h2 id="manual-installation">手動インストール</h2>
+        <p><code>install.bat</code> で追加できない場合は、DaVinci Resolve を終了して以下のファイルをコピーします。パスをエクスプローラーのアドレスバーに貼り付けて開き、フォルダがなければ作成してください。<code>Installation complete.</code> の表示だけではコピーの成功を確認できない場合があります。</p>
+        <h3 id="manual-fuses">Fuse</h3>
+        <p>展開した <code>MathMotionGraph</code> フォルダ内の <code>Fuses</code> フォルダにある <code>MathMotionGraph.fuse</code> を以下へコピーします。</p>
+        <div class="path-copy">
+          <code>%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses</code>
+          <button type="button" data-copy="%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses" hidden>コピー</button>
+          <span class="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <h3 id="manual-templates">Edit</h3>
+        <p>展開した <code>MathMotionGraph</code> フォルダ内の <code>Edit</code> フォルダにある <code>MathMotionGraph.setting</code> と <code>MathMotionGraph.png</code> を以下へコピーします。</p>
+        <div class="path-copy">
+          <code>%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\Edit\Generators</code>
+          <button type="button" data-copy="%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\Edit\Generators" hidden>コピー</button>
+          <span class="copy-status" role="status" aria-live="polite"></span>
+        </div>
+        <p>コピー後、DaVinci Resolve を再起動し、<a href="#find-plugin">プラグインを確認</a>してください。</p>
+        <h2 id="help">うまくいかない場合</h2>
+        <p>うまくいかない場合には、<a href="mathmotiongraph-faq.html">MathMotionGraph FAQ</a>を参照してください。</p>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">お問い合わせ</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

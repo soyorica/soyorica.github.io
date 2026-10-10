@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathText Usage | Soyorica</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="../assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">Using Our Products</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="../mathtext-usage.html" lang="ja" data-language-switch>日本語</a>
+          <span>/</span>
+          <a href="mathtext-usage.html" lang="en" aria-current="true">EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <ul>
+            <li>
+              <a href="#mathtext-first">Basic usage</a>
+            </li>
+            <li>
+              <a href="#mathtext-examples">Formula examples</a>
+            </li>
+            <li>
+              <a href="#animation-settings">Animation settings</a>
+            </li>
+            <li>
+              <a href="#related">Related pages</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="Product pages">
+          <a href="mathtext-install.html">Installation</a>
+          <a href="mathtext-usage.html" aria-current="page">Usage</a>
+          <a href="mathtext-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="mathtext">MathText Usage</h1>
+        <p>A generator for displaying equations using LaTeX-style notation. It does not implement all LaTeX features.</p>
+        <h2 id="mathtext-first">Basic usage</h2>
+        <ol>
+          <li>
+            Follow the <a href="mathtext-install.html#installation">installation</a>. MathText has embedded fonts.
+          </li>
+          <li>
+            On the Edit page, drag <code>MathText</code> from Effects → Titles onto a track above your footage.
+          </li>
+          <li>
+            Enter an expression in the Inspector&#x27;s <code>Formula</code> field, for example <code>\frac{1}{2}</code>.
+          </li>
+          <li>
+            Adjust <code>Size</code>, then use <code>Position X</code> / <code>Position Y</code> to place the equation.
+          </li>
+          <li>
+            Set the main color with <code>Base Color</code> under <code>Appearance</code>.
+          </li>
+          <li>
+            Use <code>WriteProgress</code> under <code>Write Animation</code> to add an entrance animation.
+          </li>
+          <li>
+            In Fusion, add <code>MathText</code> using <code>Shift + Space</code>. Connect it to <code>MediaOut</code> for standalone output, or to <code>Merge</code> to composite it over footage.
+          </li>
+        </ol>
+        <h2 id="mathtext-examples">Formula examples</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Table (scroll horizontally)">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Expression</th>
+                <th scope="col">Enter in Formula</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Superscript and subscript</td>
+                <td><code>x^2 + a_1</code></td>
+              </tr>
+              <tr>
+                <td>Fraction</td>
+                <td><code>\frac{a+b}{c}</code></td>
+              </tr>
+              <tr>
+                <td>Square root</td>
+                <td><code>\sqrt{x}</code></td>
+              </tr>
+              <tr>
+                <td>Integral</td>
+                <td><code>\int_a^b f(x)\,dx</code></td>
+              </tr>
+              <tr>
+                <td>Greek letters</td>
+                <td><code>\alpha + \beta</code></td>
+              </tr>
+              <tr>
+                <td>Color specific characters</td>
+                <td><code>y = a {\color{1}x} + b</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>
+            Enter the expression directly, without enclosing it in <code>$</code> characters.
+          </li>
+          <li>
+            Group multiple characters with braces, for example <code>x^{a+b}</code>.
+          </li>
+          <li>
+            To change the color of specific characters, use <code>\color{}</code>. Inside the braces, enter a color name such as <code>red</code>, or a number from <code>1</code> to <code>4</code> for a color set in the Inspector.
+          </li>
+          <li>
+            If an expression does not appear, check matching braces and command spelling, then try a shorter expression. Also check the error message displayed on screen.
+          </li>
+        </ul>
+        <h2 id="animation-settings">Animation settings</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Table (scroll horizontally)">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Setting</th>
+                <th scope="col">Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Write</td>
+                <td>Progress of the entrance animation</td>
+              </tr>
+              <tr>
+                <td>Erase</td>
+                <td>Progress of the exit animation</td>
+              </tr>
+              <tr>
+                <td>Charactor Lag</td>
+                <td>How much the animation start times of individual characters overlap</td>
+              </tr>
+              <tr>
+                <td>Outline width</td>
+                <td>Line width during the animation; does not affect the line width of the characters displayed after the animation ends</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="related">Related pages</h2>
+        <ul>
+          <li>
+            <a href="mathtext-install.html">MathText installation</a>
+          </li>
+          <li>
+            <a href="mathtext-faq.html">MathText FAQ</a>
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

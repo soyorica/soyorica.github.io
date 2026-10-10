@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MathMotionGraph Lite Usage | Soyorica</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../assets/site.js" defer></script>
+  </head>
+  <body class="document">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="../assets/icon.svg" alt="" width="36" height="36"><span>Soyorica</span></a>
+        <!-- COMMON LINKS: same-language home, FAQ and terms -->
+        <nav aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="faq.html">FAQ</a>
+          <a href="terms.html">Using Our Products</a>
+        </nav>
+        <!-- LANGUAGE LINKS: the same filename in the other language folder -->
+        <div class="languages">
+          <a href="../mathmotiongraph-lite-usage.html" lang="ja" data-language-switch>日本語</a>
+          <span>/</span>
+          <a href="mathmotiongraph-lite-usage.html" lang="en" aria-current="true">EN</a>
+        </div>
+      </div>
+    </header>
+    <div class="page-layout">
+      <aside class="toc">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <ul>
+            <li>
+              <a href="#lite-first">Basic usage</a>
+            </li>
+            <li>
+              <a href="#lite-animation">Animate a graph</a>
+            </li>
+            <li>
+              <a href="#lite-comparison">Comparison with the full version</a>
+            </li>
+            <li>
+              <a href="#related">Related pages</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <!-- PRODUCT LINKS: installation, usage and FAQ for this product -->
+        <nav class="product-nav" aria-label="Product pages">
+          <a href="mathmotiongraph-lite-install.html">Installation</a>
+          <a href="mathmotiongraph-lite-usage.html" aria-current="page">Usage</a>
+          <a href="mathmotiongraph-lite-faq.html">FAQ</a>
+        </nav>
+        <!-- CONTENT START: edit this area if editing HTML directly -->
+        <h1 id="mathmotiongraph-lite">MathMotionGraph Lite Usage</h1>
+        <p>The Lite edition supports Cartesian graphs and regions defined by a single inequality. See <a href="mathmotiongraph-usage.html">MathMotionGraph usage</a> for the full version.</p>
+        <h2 id="lite-first">Basic usage</h2>
+        <ol>
+          <li>
+            Follow <a href="mathmotiongraph-lite-install.html#installation">installation</a> to install MathMotionGraph Lite.
+          </li>
+          <li>
+            On the Edit page, drag <code>MathMotionGraph_Lite</code> from Effects → Generators onto the timeline.
+          </li>
+          <li>
+            In the Inspector, enter a formula such as <code>y = sin(x)</code> or <code>x^2 + y^2 &lt;= 4</code> in <code>Formula</code>.
+          </li>
+          <li>
+            Set the visible range under <code>View</code>, and adjust the line and region appearance under <code>Boundary</code> / <code>Region</code>.
+          </li>
+          <li>
+            Adjust the axes and grid under <code>Axes</code> / <code>Grid</code>.
+          </li>
+          <li>
+            In Fusion, add the node using <code>Shift + Space</code> and connect its output to <code>MediaOut</code>. Use a <code>Merge</code> node to place the graph over footage.
+          </li>
+        </ol>
+        <h2 id="lite-animation">Animate a graph</h2>
+        <ul>
+          <li>
+            Change the graph shape: use a constant in a formula such as <code>y = a*sin(x)</code>, then keyframe <code>a</code>.
+          </li>
+          <li>
+            Move a point: enable <code>Moving Point</code> and keyframe <code>Point Position</code>.
+          </li>
+        </ul>
+        <h2 id="lite-comparison">Comparison with the full version</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Table (scroll horizontally)">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Lite</th>
+                <th scope="col">Full version</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cartesian graphs and single inequalities</td>
+                <td>〇</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>Constants a–d, moving points, and guides</td>
+                <td>〇</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>Axes, grid, and background settings</td>
+                <td>〇</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>Animations</td>
+                <td>△ (Limited)</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>Parametric and polar modes</td>
+                <td>✖</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>Second curve and fill between curves</td>
+                <td>✖</td>
+                <td>〇</td>
+              </tr>
+              <tr>
+                <td>Region rendering with combined AND / OR conditions</td>
+                <td>✖</td>
+                <td>〇</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>
+            Lite supports the variables <code>x</code> and <code>y</code>. See the <a href="mathmotiongraph-usage.html#graph-formulas">MathMotionGraph expression list</a> for constants, operators, and functions.
+          </li>
+          <li>
+            Lite supports animations that change the graph shape or move a point. Drawing lines progressively and revealing regions are available only in the full version.
+          </li>
+          <li>
+            Use <code>Vertical / Horizontal Guide</code> for guide lines and <code>Guide Values</code> for coordinate labels.
+          </li>
+        </ul>
+        <h2 id="related">Related pages</h2>
+        <ul>
+          <li>
+            <a href="mathmotiongraph-lite-install.html">MathMotionGraph Lite installation</a>
+          </li>
+          <li>
+            <a href="mathmotiongraph-lite-faq.html">MathMotionGraph Lite FAQ</a>
+          </li>
+        </ul>
+        <!-- CONTENT END -->
+      </main>
+    </div>
+    <footer>
+      <div class="footer-inner">
+        <span>© Soyorica</span>
+        <div>
+          <a href="https://soyorica.booth.pm/">BOOTH</a>
+          <a href="faq.html#support">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
